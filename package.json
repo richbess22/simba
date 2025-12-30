@@ -23,6 +23,7 @@
     "child_process": "^1.0.2",
     "denethdev-ytmp3": "1.0.3",
     "cheerio": "1.1.0",
+    "mongoose": "^8.17.0",
     "ruhend-scraper": "9.0.1",
     "yt-search": "2.12.1",
     "node-fetch": "3.3.2",
