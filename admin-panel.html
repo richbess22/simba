@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝙎𝙄𝙇𝘼-𝙈𝘿 🐢 | 𝘼𝘿𝙈𝙄𝙉 𝙋𝘼𝙉𝙀𝙇 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #000000 0%, #0a0a2a 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(0, 30, 60, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid #0066ff;
+            border-radius: 20px;
+            padding: 20px 30px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+        }
+
+        .logo h1 {
+            font-size: 32px;
+            background: linear-gradient(45deg, #0066ff, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            font-size: 14px;
+            color: #00ccff;
+            display: block;
+        }
+
+        .stats-badge {
+            display: flex;
+            gap: 20px;
+        }
+
+        .badge {
+            background: rgba(0, 102, 255, 0.2);
+            border: 1px solid #0066ff;
+            border-radius: 15px;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .badge .value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00ccff;
+        }
+
+        .badge .label {
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        /* Cards Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: rgba(0, 20, 40, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid #0066ff;
+            border-radius: 20px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 102, 255, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.4);
+            border-color: #00ccff;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #0066ff;
+            padding-bottom: 15px;
+        }
+
+        .card-header i {
+            font-size: 28px;
+            color: #0066ff;
+        }
+
+        .card-header h2 {
+            font-size: 20px;
+            color: #00ccff;
+        }
+
+        /* Forms */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #00ccff;
+            font-size: 14px;
+        }
+
+        .input-group input, 
+        .input-group textarea,
+        .input-group select {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(0, 30, 60, 0.8);
+            border: 1px solid #0066ff;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            outline: none;
+            border-color: #00ccff;
+            box-shadow: 0 0 15px rgba(0, 204, 255, 0.3);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: linear-gradient(135deg, #0066ff, #00ccff);
+            color: #000;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0, 102, 255, 0.5);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ff0066, #ff3300);
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #ffaa00, #ff6600);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #00ff88, #00cc66);
+        }
+
+        /* Tables */
+        .table-container {
+            overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #0066ff;
+            color: #000;
+            padding: 12px;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #0066ff;
+            color: #ddd;
+        }
+
+        tr:hover {
+            background: rgba(0, 102, 255, 0.1);
+        }
+
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status-active {
+            background: #00ff88;
+            color: #000;
+        }
+
+        .status-inactive {
+            background: #ff0066;
+            color: #fff;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background: rgba(0, 30, 60, 0.8);
+            border: 1px solid #0066ff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            background: #0066ff;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .tab:hover {
+            border-color: #00ccff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Progress */
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(0, 30, 60, 0.8);
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #0066ff, #00ccff);
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #0066ff;
+            color: #000;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: 600;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Loading */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #0066ff;
+            border-radius: 50%;
+            border-top-color: #00ccff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <h1>🐢 𝙎𝙄𝙇𝘼-𝙈𝘿 𝘼𝘿𝙈𝙄𝙉</h1>
+                <span>Premium Panel 2026 | Blue in Black Edition</span>
+            </div>
+            <div class="stats-badge">
+                <div class="badge">
+                    <div class="value" id="totalSessions">0</div>
+                    <div class="label">Total Sessions</div>
+                </div>
+                <div class="badge">
+                    <div class="value" id="activeSessions">0</div>
+                    <div class="label">Active Now</div>
+                </div>
+                <div class="badge">
+                    <div class="value" id="memoryUsage">0MB</div>
+                    <div class="label">Memory</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('dashboard')">📊 Dashboard</div>
+            <div class="tab" onclick="switchTab('sessions')">👥 Sessions</div>
+            <div class="tab" onclick="switchTab('autofollow')">🔄 Auto-Follow</div>
+            <div class="tab" onclick="switchTab('mongodb')">🗄️ MongoDB</div>
+            <div class="tab" onclick="switchTab('settings')">⚙️ Settings</div>
+            <div class="tab" onclick="switchTab('logs')">📝 Logs</div>
+        </div>
+
+        <!-- Dashboard Tab -->
+        <div id="dashboard" class="tab-content active">
+            <div class="grid">
+                <!-- Quick Actions -->
+                <div class="card">
+                    <div class="card-header">
+                        <i>⚡</i>
+                        <h2>Quick Actions</h2>
+                    </div>
+                    <button class="btn btn-success" onclick="reconnectAll()">🔄 Reconnect All Sessions</button>
+                    <button class="btn" onclick="refreshStats()">📊 Refresh Stats</button>
+                    <button class="btn btn-warning" onclick="testConnection()">🔌 Test Connection</button>
+                    <button class="btn btn-danger" onclick="clearAllSessions()">🗑️ Clear All Sessions</button>
+                </div>
+
+                <!-- System Info -->
+                <div class="card">
+                    <div class="card-header">
+                        <i>💻</i>
+                        <h2>System Info</h2>
+                    </div>
+                    <div class="input-group">
+                        <label>Uptime</label>
+                        <div id="uptime">Loading...</div>
+                    </div>
+                    <div class="input-group">
+                        <label>Node Version</label>
+                        <div id="nodeVersion">v18+</div>
+                    </div>
+                    <div class="input-group">
+                        <label>Platform</label>
+                        <div id="platform">Linux</div>
+                    </div>
+                </div>
+
+                <!-- MongoDB Status -->
+                <div class="card">
+                    <div class="card-header">
+                        <i>🗄️</i>
+                        <h2>MongoDB Status</h2>
+                    </div>
+                    <div class="input-group">
+                        <label>Current URI</label>
+                        <input type="text" id="currentMongoURI" value="mongodb+srv://..." readonly>
+                    </div>
+                    <div class="input-group">
+                        <label>Connection Status</label>
+                        <div><span class="status-badge status-active" id="mongoStatus">✅ Connected</span></div>
+                    </div>
+                    <div class="input-group">
+                        <label>Total Documents</label>
+                        <div id="totalDocs">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="card">
+                <div class="card-header">
+                    <i>📋</i>
+                    <h2>Recent Activity</h2>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Action</th>
+                                <th>Number</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recentActivity">
+                            <tr>
+                                <td colspan="4" style="text-align: center;">No recent activity</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sessions Tab -->
+        <div id="sessions" class="tab-content">
+            <div class="card">
+                <div class="card-header">
+                    <i>👥</i>
+                    <h2>All Sessions from MongoDB</h2>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <button class="btn btn-success" onclick="loadSessions()">🔄 Refresh List</button>
+                    <button class="btn" onclick="reconnectAll()">🔄 Reconnect All</button>
+                    <button class="btn btn-danger" onclick="deleteAllSessions()">🗑️ Delete All</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Number</th>
+                                <th>Status</th>
+                                <th>Last Active</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sessionsList">
+                            <tr>
+                                <td colspan="4" style="text-align: center;">Loading sessions...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Auto-Follow Tab -->
+        <div id="autofollow" class="tab-content">
+            <div class="grid">
+                <!-- Newsletter JIDs -->
+                <div class="card">
+                    <div class="card-header">
+                        <i>📢</i>
+                        <h2>Newsletter JIDs</h2>
+                    </div>
+                    <div class="input-group">
+                        <label>JID List (one per line)</label>
+                        <textarea id="newsletterJIDs" rows="5" placeholder="120363402325089913@newsletter&#10;120363123456789@newsletter">120363402325089913@newsletter</textarea>
+                    </div>
+                    <button class="btn" onclick="saveNewsletterJIDs()">💾 Save JIDs</button>
+                    <button class="btn btn-success" onclick="followAllNewsletters()">➕ Follow All</button>
+                </div>
+
+                <!-- Group Links -->
+                <div class="card">
+                    <div class="card-header">
+                        <i>👥</i>
+                        <h2>Group Links</h2>
+                    </div>
+                    <div class="input-group">
+                        <label>Group Invite Links (one per line)</label>
+                        <textarea id="groupLinks" rows="5" placeholder="https://chat.whatsapp.com/xxxxxx">https://chat.whatsapp.com/IdGNaKt80DEBqirc2ek4ks</textarea>
+                    </div>
+                    <button class="btn" onclick="saveGroupLinks()">💾 Save Links</button>
+                    <button class="btn btn-success" onclick="joinAllGroups()">➕ Join All Groups</button>
+                </div>
+
+                <!-- Auto Status Settings -->
+                <div class="card">
+                    <div class="card-header">
+                        <i>📱</i>
+                        <h2>Auto Status Settings</h2>
+                    </div>
+                    <div class="input-group">
+                        <label>
+                            <input type="checkbox" id="autoViewStatus" checked> Auto View Status
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label>
+                            <input type="checkbox" id="autoLikeStatus" checked> Auto Like Status
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label>
+                            <input type="checkbox" id="autoRecording" checked> Auto Recording
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label>Auto Like Emojis</label>
+                        <input type="text" id="autoLikeEmojis" value="💋,😶,✨️,💗,🎈,🎉,🥳,❤️,🧫,🐢">
+                    </div>
+                    <button class="btn" onclick="saveAutoSettings()">💾 Save Settings</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MongoDB Tab -->
+        <div id="mongodb" class="tab-content">
+            <div class="card">
+                <div class="card-header">
+                    <i>🗄️</i>
+                    <h2>MongoDB Configuration</h2>
+                </div>
+                <div class="input-group">
+                    <label>MongoDB URI</label>
+                    <input type="text" id="mongoURI" placeholder="mongodb+srv://username:password@cluster.mongodb.net/" value="mongodb+srv://malvintech11_db_user:0SBgxRy7WsQZ1KTq@cluster0.xqgaovj.mongodb.net/">
+                </div>
+                <button class="btn btn-success" onclick="testMongoConnection()">🔌 Test Connection</button>
+                <button class="btn" onclick="changeMongoDB()">💾 Change MongoDB</button>
+                <button class="btn btn-warning" onclick="backupSessions()">💾 Backup Sessions</button>
+                <button class="btn" onclick="restoreSessions()">📂 Restore Sessions</button>
+            </div>
+
+            <div class="card" style="margin-top: 20px;">
+                <div class="card-header">
+                    <i>📊</i>
+                    <h2>Database Stats</h2>
+                </div>
+                <div class="grid">
+                    <div class="badge">
+                        <div class="value" id="dbSessions">0</div>
+                        <div class="label">Sessions</div>
+                    </div>
+                    <div class="badge">
+                        <div class="value" id="dbSettings">0</div>
+                        <div class="label">Settings</div>
+                    </div>
+                    <div class="badge">
+                        <div class="value" id="dbSize">0MB</div>
+                        <div class="label">Size</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Tab -->
+        <div id="settings" class="tab-content">
+            <div class="card">
+                <div class="card-header">
+                    <i>⚙️</i>
+                    <h2>Bot Settings</h2>
+                </div>
+                <div class="grid">
+                    <div class="input-group">
+                        <label>Prefix</label>
+                        <input type="text" id="prefix" value=".">
+                    </div>
+                    <div class="input-group">
+                        <label>Owner Number</label>
+                        <input type="text" id="ownerNumber" value="255612491554">
+                    </div>
+                    <div class="input-group">
+                        <label>Bot Footer</label>
+                        <input type="text" id="botFooter" value=">  © 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈🐢𝚂𝙸𝙻𝙰-𝙼𝙳">
+                    </div>
+                    <div class="input-group">
+                        <label>Image URL</label>
+                        <input type="text" id="imagePath" value="https://files.catbox.moe/jwmx1j.jpg">
+                    </div>
+                    <div class="input-group">
+                        <label>Channel Link</label>
+                        <input type="text" id="channelLink" value="https://whatsapp.com/channel/0029VbBG4gfISTkCpKxyMH02">
+                    </div>
+                </div>
+                <button class="btn" onclick="saveBotSettings()">💾 Save Settings</button>
+            </div>
+        </div>
+
+        <!-- Logs Tab -->
+        <div id="logs" class="tab-content">
+            <div class="card">
+                <div class="card-header">
+                    <i>📝</i>
+                    <h2>System Logs</h2>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <button class="btn" onclick="refreshLogs()">🔄 Refresh</button>
+                    <button class="btn btn-danger" onclick="clearLogs()">🗑️ Clear</button>
+                </div>
+                <div class="table-container" style="max-height: 500px;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Level</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody id="logsList">
+                            <tr>
+                                <td colspan="3" style="text-align: center;">Loading logs...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let activeTab = 'dashboard';
+        let logs = [];
+        let activities = [];
+
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.style.background = type === 'error' ? '#ff0066' : '#0066ff';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        function switchTab(tab) {
+            activeTab = tab;
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.tab[onclick="switchTab('${tab}')"]`).classList.add('active');
+            document.getElementById(tab).classList.add('active');
+            
+            if (tab === 'sessions') loadSessions();
+            if (tab === 'dashboard') refreshStats();
+            if (tab === 'logs') refreshLogs();
+            if (tab === 'mongodb') loadMongoStats();
+        }
+
+        async function refreshStats() {
+            try {
+                const res = await fetch('/api/stats');
+                const data = await res.json();
+                
+                document.getElementById('totalSessions').textContent = data.totalSessions || 0;
+                document.getElementById('activeSessions').textContent = data.activeSessions || 0;
+                document.getElementById('memoryUsage').textContent = data.memory || '0MB';
+                document.getElementById('uptime').textContent = data.uptime || '0h 0m';
+                
+            } catch (error) {
+                console.error('Stats error:', error);
+            }
+        }
+
+        async function loadSessions() {
+            const tbody = document.getElementById('sessionsList');
+            tbody.innerHTML = '<tr><td colspan="4" style="text-align: center;"><div class="loading"></div> Loading...</td></tr>';
+            
+            try {
+                const res = await fetch('/api/sessions');
+                const data = await res.json();
+                
+                if (data.sessions && data.sessions.length > 0) {
+                    tbody.innerHTML = data.sessions.map(s => `
+                        <tr>
+                            <td>${s.number}</td>
+                            <td><span class="status-badge ${s.active ? 'status-active' : 'status-inactive'}">${s.active ? '🟢 Active' : '🔴 Inactive'}</span></td>
+                            <td>${s.lastActive || 'N/A'}</td>
+                            <td>
+                                <button class="btn" style="padding: 5px 10px;" onclick="reconnectSession('${s.number}')">🔄</button>
+                                <button class="btn btn-danger" style="padding: 5px 10px;" onclick="deleteSession('${s.number}')">🗑️</button>
+                                <button class="btn btn-warning" style="padding: 5px 10px;" onclick="forceLogout('${s.number}')">🚪</button>
+                            </td>
+                        </tr>
+                    `).join('');
+                } else {
+                    tbody.innerHTML = '<tr><td colspan="4" style="text-align: center;">No sessions found</td></tr>';
+                }
+            } catch (error) {
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; color: #ff0066;">Error loading sessions</td></tr>';
+            }
+        }
+
+        async function reconnectAll() {
+            if (!confirm('Reconnect all sessions?')) return;
+            
+            showToast('Starting reconnect all sessions...');
+            
+            try {
+                const res = await fetch('/api/reconnect-all', { method: 'POST' });
+                const data = await res.json();
+                
+                showToast(`Reconnected ${data.success} sessions`);
+                addActivity('Reconnect All', 'All', 'Success');
+                setTimeout(() => refreshStats(), 2000);
+                
+            } catch (error) {
+                showToast('Failed to reconnect', 'error');
+            }
+        }
+
+        async function reconnectSession(number) {
+            showToast(`Reconnecting ${number}...`);
+            
+            try {
+                const res = await fetch('/api/reconnect', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ number })
+                });
+                
+                const data = await res.json();
+                showToast(`Session ${number} reconnected`);
+                addActivity('Reconnect', number, 'Success');
+                loadSessions();
+                
+            } catch (error) {
+                showToast('Failed to reconnect', 'error');
+            }
+        }
+
+        async function deleteSession(number) {
+            if (!confirm(`Delete session ${number}?`)) return;
+            
+            try {
+                const res = await fetch('/api/delete-session', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ number })
+                });
+                
+                showToast(`Session ${number} deleted`);
+                addActivity('Delete', number, 'Success');
+                loadSessions();
+                
+            } catch (error) {
+                showToast('Failed to delete', 'error');
+            }
+        }
+
+        async function followAllNewsletters() {
+            const jids = document.getElementById('newsletterJIDs').value.split('\n').filter(j => j.trim());
+            
+            showToast(`Following ${jids.length} newsletters...`);
+            
+            try {
+                const res = await fetch('/api/follow-newsletters', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ jids })
+                });
+                
+                showToast('Followed all newsletters');
+                addActivity('Follow Newsletters', `${jids.length} JIDs`, 'Success');
+                
+            } catch (error) {
+                showToast('Failed to follow', 'error');
+            }
+        }
+
+        async function joinAllGroups() {
+            const links = document.getElementById('groupLinks').value.split('\n').filter(l => l.trim());
+            
+            showToast(`Joining ${links.length} groups...`);
+            
+            try {
+                const res = await fetch('/api/join-groups', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ links })
+                });
+                
+                showToast('Joined all groups');
+                addActivity('Join Groups', `${links.length} groups`, 'Success');
+                
+            } catch (error) {
+                showToast('Failed to join', 'error');
+            }
+        }
+
+        async function changeMongoDB() {
+            const uri = document.getElementById('mongoURI').value;
+            
+            if (!confirm('Change MongoDB URI? This will reconnect all sessions.')) return;
+            
+            showToast('Changing MongoDB...');
+            
+            try {
+                const res = await fetch('/api/change-mongodb', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ uri })
+                });
+                
+                const data = await res.json();
+                showToast('MongoDB changed successfully');
+                addActivity('Change MongoDB', uri.substring(0, 30) + '...', 'Success');
+                
+            } catch (error) {
+                showToast('Failed to change MongoDB', 'error');
+            }
+        }
+
+        async function testMongoConnection() {
+            const uri = document.getElementById('mongoURI').value;
+            
+            try {
+                const res = await fetch('/api/test-mongo', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ uri })
+                });
+                
+                const data = await res.json();
+                showToast(data.success ? '✅ Connected' : '❌ Failed', data.success ? 'success' : 'error');
+                
+            } catch (error) {
+                showToast('Connection failed', 'error');
+            }
+        }
+
+        async function saveNewsletterJIDs() {
+            const jids = document.getElementById('newsletterJIDs').value;
+            localStorage.setItem('newsletterJIDs', jids);
+            showToast('Newsletter JIDs saved locally');
+        }
+
+        async function saveGroupLinks() {
+            const links = document.getElementById('groupLinks').value;
+            localStorage.setItem('groupLinks', links);
+            showToast('Group links saved locally');
+        }
+
+        async function saveAutoSettings() {
+            const settings = {
+                autoViewStatus: document.getElementById('autoViewStatus').checked,
+                autoLikeStatus: document.getElementById('autoLikeStatus').checked,
+                autoRecording: document.getElementById('autoRecording').checked,
+                autoLikeEmojis: document.getElementById('autoLikeEmojis').value
+            };
+            
+            localStorage.setItem('autoSettings', JSON.stringify(settings));
+            showToast('Auto settings saved');
+        }
+
+        async function saveBotSettings() {
+            const settings = {
+                prefix: document.getElementById('prefix').value,
+                ownerNumber: document.getElementById('ownerNumber').value,
+                botFooter: document.getElementById('botFooter').value,
+                imagePath: document.getElementById('imagePath').value,
+                channelLink: document.getElementById('channelLink').value
+            };
+            
+            localStorage.setItem('botSettings', JSON.stringify(settings));
+            
+            try {
+                await fetch('/api/update-bot-settings', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(settings)
+                });
+                showToast('Bot settings saved');
+            } catch (error) {
+                showToast('Settings saved locally only', 'warning');
+            }
+        }
+
+        async function refreshLogs() {
+            const tbody = document.getElementById('logsList');
+            
+            try {
+                const res = await fetch('/api/logs');
+                const data = await res.json();
+                
+                if (data.logs && data.logs.length > 0) {
+                    tbody.innerHTML = data.logs.map(log => `
+                        <tr>
+                            <td>${log.time}</td>
+                            <td><span class="status-badge ${log.level === 'error' ? 'status-inactive' : 'status-active'}">${log.level}</span></td>
+                            <td>${log.message}</td>
+                        </tr>
+                    `).join('');
+                } else {
+                    tbody.innerHTML = '<tr><td colspan="3" style="text-align: center;">No logs</td></tr>';
+                }
+            } catch (error) {
+                tbody.innerHTML = '<tr><td colspan="3" style="text-align: center;">Error loading logs</td></tr>';
+            }
+        }
+
+        async function loadMongoStats() {
+            try {
+                const res = await fetch('/api/mongo-stats');
+                const data = await res.json();
+                
+                document.getElementById('dbSessions').textContent = data.sessions || 0;
+                document.getElementById('dbSettings').textContent = data.settings || 0;
+                document.getElementById('dbSize').textContent = data.size || '0MB';
+                
+            } catch (error) {
+                console.error('Mongo stats error:', error);
+            }
+        }
+
+        function addActivity(action, target, status) {
+            const time = new Date().toLocaleTimeString();
+            activities.unshift({ time, action, target, status });
+            
+            if (activities.length > 10) activities.pop();
+            
+            const tbody = document.getElementById('recentActivity');
+            tbody.innerHTML = activities.map(a => `
+                <tr>
+                    <td>${a.time}</td>
+                    <td>${a.action}</td>
+                    <td>${a.target}</td>
+                    <td><span class="status-badge ${a.status === 'Success' ? 'status-active' : 'status-inactive'}">${a.status}</span></td>
+                </tr>
+            `).join('');
+        }
+
+        async function testConnection() {
+            showToast('Testing connection...');
+            try {
+                const res = await fetch('/api/ping');
+                const data = await res.json();
+                showToast(`✅ Server OK - ${data.activesession} active sessions`);
+            } catch (error) {
+                showToast('❌ Connection failed', 'error');
+            }
+        }
+
+        function clearAllSessions() {
+            if (!confirm('⚠️ Clear ALL sessions? This action cannot be undone!')) return;
+            
+            // Implementation
+            showToast('Clearing all sessions...', 'warning');
+        }
+
+        function deleteAllSessions() {
+            if (!confirm('⚠️ Delete ALL sessions from database? This action cannot be undone!')) return;
+            
+            // Implementation
+            showToast('Deleting all sessions...', 'warning');
+        }
+
+        function forceLogout(number) {
+            if (!confirm(`Force logout session ${number}?`)) return;
+            
+            // Implementation
+            showToast(`Force logging out ${number}...`);
+        }
+
+        function backupSessions() {
+            showToast('Creating backup...');
+            // Implementation
+        }
+
+        function restoreSessions() {
+            showToast('Restoring from backup...');
+            // Implementation
+        }
+
+        function clearLogs() {
+            if (!confirm('Clear all logs?')) return;
+            document.getElementById('logsList').innerHTML = '<tr><td colspan="3" style="text-align: center;">Logs cleared</td></tr>';
+            showToast('Logs cleared');
+        }
+
+        // Load saved settings
+        window.onload = function() {
+            // Load newsletter JIDs
+            const savedJIDs = localStorage.getItem('newsletterJIDs');
+            if (savedJIDs) document.getElementById('newsletterJIDs').value = savedJIDs;
+            
+            // Load group links
+            const savedLinks = localStorage.getItem('groupLinks');
+            if (savedLinks) document.getElementById('groupLinks').value = savedLinks;
+            
+            // Load auto settings
+            const savedAuto = localStorage.getItem('autoSettings');
+            if (savedAuto) {
+                const settings = JSON.parse(savedAuto);
+                document.getElementById('autoViewStatus').checked = settings.autoViewStatus;
+                document.getElementById('autoLikeStatus').checked = settings.autoLikeStatus;
+                document.getElementById('autoRecording').checked = settings.autoRecording;
+                document.getElementById('autoLikeEmojis').value = settings.autoLikeEmojis;
+            }
+            
+            // Load bot settings
+            const savedBot = localStorage.getItem('botSettings');
+            if (savedBot) {
+                const settings = JSON.parse(savedBot);
+                document.getElementById('prefix').value = settings.prefix || '.';
+                document.getElementById('ownerNumber').value = settings.ownerNumber || '255612491554';
+                document.getElementById('botFooter').value = settings.botFooter || '>  © 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈🐢𝚂𝙸𝙻𝙰-𝙼𝙳';
+                document.getElementById('imagePath').value = settings.imagePath || 'https://files.catbox.moe/jwmx1j.jpg';
+                document.getElementById('channelLink').value = settings.channelLink || 'https://whatsapp.com/channel/0029VbBG4gfISTkCpKxyMH02';
+            }
+            
+            // Initial loads
+            refreshStats();
+            loadSessions();
+            addActivity('System Start', 'Admin Panel', 'Success');
+            
+            // Auto refresh every 30 seconds
+            setInterval(refreshStats, 30000);
+        };
+    </script>
+</body>
+</html>
